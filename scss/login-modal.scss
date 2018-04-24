@@ -1,0 +1,158 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.modal {
+
+  &__content {
+    padding: 20px 30px 30px 30px;
+    border: none!important;
+    border-radius: 20px!important;
+    width: 500px!important;
+    margin: 0 auto;
+    @media screen and (max-width: $mobile-width) {
+      width: auto!important;
+      max-width: 500px!important;
+      padding: 12px 20px;
+    }
+  }
+
+  &__header {
+    border-bottom: none!important;
+    padding-bottom: 10px!important;
+  }
+
+  &__close {
+    font-size: 1.5em;
+    margin: -18px -18px 0 0;
+  }
+
+  &__title {
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: $color-h1;
+  }
+
+  &__label-input {
+    @include input-label;
+  }
+
+  &__login-input {
+    @include user-input;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: $mobile-width) {
+      flex-direction: column;
+    }
+  }
+
+  &__login-button {
+    border: none;
+    border-radius: 50px;
+    background-color: #2a79ee;
+    padding: 14px 50px;
+    color: $color-main-text-light;
+    cursor: pointer;
+    transition: .3s background-color;
+    font-weight: bold;
+    font-size: 18px;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background-color: #0a4dbd;
+    }
+  }
+
+  &__register {
+    flex-flow: column;
+    display: flex;
+    @media screen and (max-width: $mobile-width) {
+      text-align: center!important;
+    }
+  }
+
+  &__registration-button {
+    color: #2a79ee;
+    text-decoration: underline;
+    transition: .3s all;
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 20px;
+    @media screen and (max-width: $mobile-width) {
+      margin-top: 20px;
+    }
+
+    &:hover {
+      color: $color-footer-links-hover;
+      text-decoration: none;
+    }
+  }
+
+  &__recovery-button {
+    @include social-hint-text;
+    &:hover {
+      text-decoration: none;
+      color: #9da2a8;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+  }
+
+  &__socials {
+    font-size: 18px;
+    color: #919699;
+  }
+
+  &__social-login {
+    display: flex;
+    align-items: flex-start;
+
+    &__button {
+      position: relative;
+      height: 37px;
+      width: 37px;
+      margin-right: 20px;
+      margin-top: 20px;
+
+      &__original {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &__hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: .3s opacity;
+      }
+
+      &:hover {
+        .modal__social-login__button__hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+    
+    &__social-hint {
+      @include social-hint-text;
+      margin-top: 20px;
+      margin-bottom: 0;
+      text-align: left;
+    }
+}

@@ -1,0 +1,1 @@
+!function(n){n(function(){n("#side-cart-box").length&&n("#side-cart-box").stick_in_parent({inner_scrolling:!0,offset_top:50})})}(jQuery);

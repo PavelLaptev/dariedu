@@ -1,0 +1,134 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.main-registration {
+
+  &__title {
+    @include h1style;
+  }
+
+  &__buyer-type {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    &__set-type {
+      @include radio-input;
+
+      &__choose {
+        @include choose-circe;
+      }
+
+      &__name {
+        color: #000000;
+        font-size: 16px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        background-color: #f8f7ee;
+      }
+
+      &.active {
+        background-color: #e0f5ff;
+
+        .main-registration__buyer-type__set-type__choose {
+          border: 5px solid #1c70ed;
+        }
+      }
+    }
+  }
+
+  &__form {
+
+    &__label-input {
+      @include input-label;
+    }
+
+    &__input {
+      @include user-input;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__accepts {
+    margin-top: 20px;
+    @include checkbox;
+
+    &__link {
+      color: #333333;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-footer-links-hover;
+      }
+    }
+  }
+
+  &__action {
+
+    &__button {
+      background-color: $color-cart-button;
+      padding: 15px 62px;
+      border-radius: 50px;
+      transition: .3s background-color;
+      color: #fefeff;
+      font-weight: 500;
+      font-size: 20px;
+      border: none;
+      margin-top: 30px;
+
+      &:hover {
+        background-color: $color-user-action-button;
+        color: #fefeff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__legal-entity-request {
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+    padding: 30px 0 40px 0;
+    margin-top: 40px;
+
+    &__title {
+      @include h1style;
+      font-size: 24px;
+    }
+
+    &__variables {
+
+      &__set-variable {
+        width: 100%;
+        display: flex;
+        padding: 9px 20px 9px 14px;
+        margin-right: 7px;
+        cursor: pointer;
+
+        &__choose {
+          @include choose-circe;
+        }
+
+        &__name {
+          color: #000000;
+          font-size: 16px;
+        }
+
+        &.active {
+
+          .main-registration__legal-entity-request__variables__set-variable__choose {
+            border: 5px solid #1c70ed;
+          }
+        }
+      }
+    }
+  }
+
+}

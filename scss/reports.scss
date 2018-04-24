@@ -1,0 +1,135 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.main-reports {
+
+  &__title {
+    @include h1style;
+  }
+
+  &__intro {
+
+    &__text {
+      @include static-text;
+    }
+
+    &__image {
+      width: 100%;
+      border-radius: 20px;
+      margin-top: 12px;
+    }
+  }
+
+  &__period-choice {
+    margin: 40px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__title {
+      @include static-text;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      margin-right: 6px;
+    }
+
+    &__variable {
+      @include static-text;
+      @include radio-input;
+      margin-left: 10px;
+      color: #000;
+      margin-right: 0;
+      border: 2px solid #e6e6e6;
+
+      &.active {
+        background-color: #e0f5ff;
+        border-color: #e0f5ff;
+        &:hover {
+          background-color: #e0f5ff;
+          border-color: #e0f5ff;
+          cursor: default;
+        }
+      }
+
+      &:hover {
+        background-color: #f8f7ee;
+        border-color: #f8f7ee;
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      @include double-columns;
+      border: 2px solid #dedede;
+      border-radius: 12px;
+      padding: 38px 38px 48px 38px;
+      margin-bottom: 20px;
+
+      &__link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &__image {
+        height: 190px;
+        border-radius: 12px;
+        background-position: center center;
+        background-size: cover;
+      }
+
+      &__date {
+        @include static-text;
+        margin-top: 30px;
+        color: #b6b6b6;
+      }
+
+      &__title {
+        @include static-subtitle-text;
+        color: #333333;
+        font-size: 22px;
+      }
+
+      &:hover {
+        border-color: $color-cart-button;
+      }
+
+      @media screen and (max-width: 450px) {
+        padding: 20px;
+      }
+    }
+  }
+
+  &__show-more {
+    display: flex;
+
+    &__button {
+      width: 100%;
+      text-align: center;
+      padding: 28px 0 30px 0;
+      color: #177ff4;
+      border: 2px solid #9ec9fa;
+      cursor: pointer;
+      border-radius: 12px;
+      font-size: 20px;
+      margin-top: 20px;
+      transition: .3s all;
+
+      &:hover {
+        color: $color-action-button-text-red;
+        border-color: $color-footer-links-hover;
+      }
+    }
+  }
+}

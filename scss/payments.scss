@@ -1,0 +1,139 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.main-payment {
+
+  &__title {
+    @include h1style;
+  }
+
+  &__variables {
+    display: flex;
+    margin-bottom: 24px;
+
+    &__set-variable {
+      @include radio-input;
+
+      &__choose {
+        @include choose-circe;
+      }
+
+      &__name {
+        color: #000000;
+        font-size: 16px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        background-color: #f8f7ee;
+      }
+
+      &.active {
+        background-color: #e0f5ff;
+
+        .main-payment__variables__set-variable__choose {
+          border: 5px solid #1c70ed;
+        }
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+  &__card {
+    margin-top: 28px;
+
+    &__login-input {
+      @include user-input;
+      font-size: 18px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__info {
+      display: flex;
+
+      & > * {
+        margin: 0 9px;
+      }
+
+      &__number {
+        flex: 5;
+
+        @media screen and (max-width: 600px) {
+          flex: 2;
+        }
+      }
+
+      &__date {
+        flex: 2;
+
+        @media screen and (max-width: 600px) {
+          flex: 1;
+        }
+      }
+
+      &__cvs {
+        flex: 1;
+      }
+
+      &__empty {
+        flex: 4;
+
+        @media screen and (max-width: 600px) {
+          flex: 0;
+        }
+      }
+    }
+
+    &__owner {
+      display: flex;
+      margin-top: 18px;
+
+      & > * {
+        margin: 0 9px;
+      }
+
+      &__name {
+        flex: 4;
+      }
+
+      &__empty {
+        flex: 5;
+      }
+    }
+  }
+
+  &__pay-button {
+    background-color: $color-cart-button;
+    padding: 15px 62px;
+    border-radius: 50px;
+    transition: .3s background-color;
+    color: #fefeff;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+
+    &.in-progress {
+      background-color: $color-sub-text;
+      cursor: default;
+      &:hover {
+        background-color: $color-sub-text!important;
+      }
+    }
+
+    &:hover {
+      background-color: $color-user-action-button;
+      color: #fefeff;
+      text-decoration: none;
+    }
+  }
+}

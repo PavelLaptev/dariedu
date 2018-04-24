@@ -1,0 +1,196 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.main-report {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    @include h1style;
+    margin-bottom: 20px;
+  }
+
+  &__date {
+    @include static-text;
+    color: #b6b6b6;
+    font-size: 16px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  &__cover {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    margin-bottom: 20px;
+    display: block;
+    float: left;
+
+    & h1 {
+      @include report-subtitle;
+      font-size: 26px;
+    }
+    & h2 {
+      @include report-subtitle;
+      font-size: 24px;
+    }
+    & h3 {
+      @include report-subtitle;
+      font-size: 22px;
+    }
+
+    & h4 {
+      @include report-subtitle;
+      font-size: 20px;
+    }
+
+    & h5 {
+      @include report-subtitle;
+      font-size: 18px;
+    }
+
+    & h6 {
+      @include report-subtitle;
+      font-size: 16px;
+    }
+
+    & p {
+      @include static-text;
+    }
+
+    & img {
+      @include report-image;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    @include report-subtitle;
+    font-size: 24px;
+  }
+
+  &__table-box {
+    display: block;
+    width: 100%;
+    float: left;
+    margin: 10px 0 40px 0;
+
+    &__intro {
+      & p {
+        @include static-text;
+      }
+    }
+
+    &__table-container {
+      margin-top: 12px;
+      border: 2px solid #dedede;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    &__table {
+      width: 100%;
+      padding: 12px 0;
+
+      &>tbody>tr {
+        padding: 25px 35px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+      }
+
+      &>tbody>tr:nth-of-type(odd) {
+        background-color: #f3f5f7;
+      }
+    }
+  }
+
+  &__resume {
+    display: block;
+    float: left;
+
+    & h1 {
+      @include report-subtitle;
+      font-size: 26px;
+    }
+    & h2 {
+      @include report-subtitle;
+      font-size: 24px;
+    }
+    & h3 {
+      @include report-subtitle;
+      font-size: 22px;
+    }
+
+    & h4 {
+      @include report-subtitle;
+      font-size: 20px;
+    }
+
+    & h5 {
+      @include report-subtitle;
+      font-size: 18px;
+    }
+
+    & h6 {
+      @include report-subtitle;
+      font-size: 16px;
+    }
+
+    & p {
+      @include static-text;
+    }
+
+    & img {
+      @include report-image;
+    }
+  }
+
+  &__report-files {
+    display: block;
+    float: left;
+  }
+
+  &__links {
+    display: flex;
+    flex: 1;
+    margin: 30px 0;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  &__report-link {
+    display: flex;
+
+    &:first-child {
+      margin-right: 45px;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &__text {
+      @include box-link-text;
+
+      @media screen and (max-width: 638px) {
+        line-height: inherit;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      margin: 6px 0;
+    }
+  }
+
+  &__report-icon {
+    height: 43px;
+    margin-right: 20px;
+    float: left;
+  }
+}

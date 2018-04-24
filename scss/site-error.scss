@@ -1,0 +1,30 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.main-site-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__cover {
+    width: 100%;
+    z-index: 56;
+  }
+
+  &__hint {
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    z-index: 56;
+  }
+
+  &__link {
+    // @include main-button;
+    text-transform: uppercase;
+    padding: 14px 20px 18px 20px;
+    margin-top: 14px;
+  }
+}

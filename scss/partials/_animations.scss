@@ -1,0 +1,16 @@
+@import "params";
+
+@keyframes colors {
+  0% {
+    color: $color-footer-links;
+  }
+  33.33333333% {
+    color: $color-cart-button;
+  }
+  66.66666667% {
+    color: $color-footer-links-hover;
+  }
+  100% {
+    color: $color-footer-links;
+  }
+}

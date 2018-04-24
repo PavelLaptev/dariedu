@@ -1,0 +1,169 @@
+@import "partials/params";
+@import "partials/mixins";
+@import "partials/animations";
+
+html, body {
+	@include clear-list;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: auto;
+	text-rendering: optimizeLegibility;
+}
+
+hr{
+	margin: 40px 0;
+}
+
+h1 {
+	font-family: 'Roboto Slab',serif;
+	font-size: 36px;
+	font-weight: 700;
+	@media screen and (max-width: 600px) {
+		font-size: 32px;
+	}
+	@media screen and (max-width: 420px) {
+		font-size: 28px;
+	}
+}
+
+h2 {
+	font-family: 'Roboto Slab',serif;
+	font-size: 32px;
+	font-weight: 700;
+	@media screen and (max-width: 600px) {
+		font-size: 24px;
+	}
+}
+
+h3 {
+	font-family: 'Roboto Slab',serif;
+	font-size: 28px;
+	font-weight: 700;
+	@media screen and (max-width: 600px) {
+		font-size: 24px;
+	}
+	@media screen and (max-width: 420px) {
+		font-size: 22px;
+	}
+}
+
+p{
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	overflow: hidden;
+	transition: transform 0.4s;
+
+	&.with-background {
+		background-image: url('../img/pattern.png');
+		background-position: center center;
+		position: relative;
+	}
+}
+
+
+
+.content-section {
+	background-color: $color-background;
+	margin-top: 8px;
+	margin-bottom: 36px;
+
+	@media screen and (max-width: 420px) {
+		margin-top: 80px;
+	}
+
+	&.without-background {
+		background-color: transparent;
+	}
+}
+
+.view-port {
+	@include view-port;
+	max-width: $view-port;
+}
+
+.slim-view-port {
+	@include view-port;
+	max-width: $slim-view-port;
+}
+
+.field-is-empty {
+	border-color: $color-action-button-text-red!important;
+}
+
+.no-mobile-tag {
+	@media screen and (max-width: $mobile-width) {
+		display: none;
+	}
+}
+.no-xs-mobile-tag {
+	@media screen and (max-width: 341px) {
+		display: none;
+	}
+}
+.only-mobile-tag {
+	display: none;
+	@media screen and (max-width: $mobile-width) {
+		display: block;
+	}
+}
+
+.alert-flash {
+	color: $color-cart-button;
+	font-size: 18px;
+	font-weight: 500;
+	position: absolute;
+	top: 70px;
+
+	&.error {
+		color: $color-action-button-text-red!important;
+	}
+	&.for-registration {
+		top: 53px!important;
+	}
+}
+
+.form-group {
+	margin-bottom: 0!important;
+}
+
+.help-block-error {
+	color: $color-action-button-text-red!important;
+}
+.has-error {
+	& .help-block {
+		color: $color-action-button-text-red!important;
+	}
+}
+
+.top12 {
+	margin-top: 12px!important;
+}
+
+.main-loader {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: 62;
+	background: rgba(255,255,255,.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__spin {
+		animation: colors 4s ease-in-out infinite;
+	}
+}
+
+.text-to-right {
+	justify-content: flex-end!important;
+}

@@ -1,0 +1,130 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.main-media {
+
+  &__title {
+    @include h1style;
+  }
+
+  &__sub-title {
+    @include static-subtitle-text;
+    font-size: 22px;
+    color: #333333;
+    margin: 40px 0 30px 0;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 30px 0;
+
+    &__contact {
+      display: flex;
+      margin-bottom: 12px;
+    }
+
+    &__icon {
+      height: 25px;
+      width: 40px;
+      float: left;
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+
+    &__value {
+      font-size: 22px;
+      color: #333333;
+
+      &.it-mail {
+        color: $color-footer-links;
+        transition: .3s color;
+        cursor: pointer;
+
+        &:hover {
+          color: $color-footer-links-hover;
+        }
+      }
+    }
+  }
+
+  &__description {
+    @include static-text;
+  }
+
+  &__links {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  &__press-link {
+    @include trick-columns;
+
+    &__text {
+      @include box-link-text;
+      font-size: 17px;
+      line-height: 20px;
+    }
+  }
+
+  &__press-icon {
+    height: 43px;
+    margin-right: 20px;
+    float: left;
+  }
+
+  &__press-articles {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &__item {
+      display: flex;
+      margin-bottom: 30px;
+      
+      &__icon {
+        display: flex;
+        flex: 1;
+        color: #a1a1a1;
+        font-size: 18px;
+      }
+      
+      &__value {
+        display: flex;
+        flex-direction: column;
+        flex: 30;
+
+        &__link {
+          color: $color-footer-links;
+          transition: .3s all;
+          font-size: 18px;
+          text-decoration: underline;
+
+          &:hover {
+            color: $color-footer-links-hover;
+            text-decoration: none;
+          }
+        }
+
+        &__source {
+          color: #515151;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  &__show-more-box {
+    margin-top: 20px;
+
+    &__button {
+      @include show-more-button;
+    }
+  }
+}

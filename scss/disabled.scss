@@ -1,0 +1,42 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.disabled-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../img/pattern.png');
+  background-position: center center;
+  opacity: .7;
+
+  &__logo {
+    margin-bottom: 100px;
+    width: 90%;
+    max-width: 500px;
+    z-index: 2;
+
+    @media screen and (max-width: 800px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__text {
+    font-family: 'Roboto Slab',sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    z-index: 2;
+    color: #000;
+
+    @media screen and (max-width: 800px) {
+      font-size: 36px;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 20px;
+    }
+  }
+}

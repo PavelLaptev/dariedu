@@ -1,0 +1,46 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.main-thanks {
+
+  &__title {
+    @include h1style;
+  }
+
+  &__success-img {
+    display: flex;
+    margin: 34px 0 50px 0;
+
+    &__img {
+
+    }
+  }
+
+  &__words {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+
+    &__to-profile {
+      @include simple-link;
+    }
+  }
+
+  &__back-to-products {
+    @include simple-link;
+    font-size: 18px;
+    margin-top: 50px;
+    display: block;
+    width: 100%;
+  }
+}

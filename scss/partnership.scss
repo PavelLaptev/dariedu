@@ -1,0 +1,143 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.main-partnership {
+
+  &__title {
+    @include h1style;
+  }
+
+  &__text {
+    @include static-text;
+  }
+
+  &__info {
+    margin: 35px 0;
+  }
+
+  &__info-blocks {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__box-shop {
+    @include double-columns;
+    overflow: inherit;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 24px;
+
+    &__picture {
+      max-width: 100%;
+      height: 115px;
+    }
+
+    &__title {
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 20px 0;
+      color: #343434;
+    }
+
+    &__description {
+      font-size: 16px;
+      color: #343434;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  &__pdg-link {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__pdf-icon {
+    height: 43px;
+    margin-right: 20px;
+    float: left;
+  }
+
+  &__text-link {
+    @include box-link-text;
+    line-height: inherit;
+  }
+
+  &__slider-box {
+    display: flex;
+    flex-direction: column;
+
+    &__slides {
+
+    }
+
+    &__slide {
+      max-height: 400px;
+      min-height: 400px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      position: relative;
+      display: none;
+
+      &__description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 12px;
+        font-weight: 300;
+      }
+
+      &.active {
+        display: block;
+      }
+    }
+
+    &__pager {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 12px;
+      margin-bottom: 30px;
+      height: 14px;
+
+      &__to-slide {
+        height: 10px;
+        width: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #e4e8ea;
+        transition: .3s all;
+
+        &.active {
+          width: 14px;
+          height: 14px;
+          background-color: #ef4f43;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__media-box {
+    width: 100%;
+
+    & iframe {
+      max-width: 100%!important;
+    }
+  }
+}
