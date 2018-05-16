@@ -22,8 +22,8 @@
                 $('.main-content__cart__empty-cart').removeClass('hidden');
                 $(fullCartBox).addClass('hidden');
             }
-            if ($('.header__cart__badge').length)
-                $('.header__cart__badge').html(cartTotal.quantity);
+            if ($('.cart-badge').length)
+                $('.cart-badge').html(cartTotal.quantity);
         };
 
         var toCart = function (that) {
@@ -31,11 +31,13 @@
             var product;
             var action = 'addToCart';
             var isSet = 0;
+            var isProduct = 0;
+            var isHelp = 0;
             var help = 0;
             var subscribe = 0;
 
             if ($(that).hasClass('it-set')) {
-                parentBox = $(that).parents('.single-set');
+                parentBox = $(that).parents('.product-box');
                 product = $(parentBox).attr('data-set');
                 isSet = 1;
             } else if ($(that).hasClass('it-help-set')) {
@@ -43,12 +45,14 @@
                 product = $(parentBox).data('set');
                 help = $(parentBox).data('help');
                 action = 'addHelpSetToCart';
+                isHelp = 1;
             } else {
                 if ($(that).hasClass('is-subscribe')) {
                     subscribe = 1;
                 }
-                parentBox = $(that).parents('.single-product');
+                parentBox = $(that).parents('.product-box');
                 product =  $(parentBox).attr('data-product');
+                isProduct = 1;
             }
             var currentCount = parseInt($(parentBox).find('input.counter-value').val());
             var newCount = 0;
@@ -85,12 +89,12 @@
                         var sets = response.data.sets;
                         var helpSets = response.data.helpSets;
 
-                        if (products !== undefined) {
+                        if (products !== undefined && isProduct) {
                             for (key in products) {
                                 if (key == product) {
                                     qty = products[key].qty;
                                     if ($(parentBox).attr('data-list') == 1 && qty == 0) {
-                                        $(parentBox).find('div.main-cart__cart-content__product__count').addClass('hidden');
+                                        $(parentBox).find('div.main-cart__cart-content__product__counter').addClass('hidden');
                                         $(parentBox).find('span.put-to-cart').removeClass('hidden');
                                         qty = 1;
                                     }
@@ -100,12 +104,12 @@
                             }
                         }
 
-                        if (sets !== undefined) {
+                        if (sets !== undefined && isSet) {
                             for (key in sets) {
                                 if (key == product) {
                                     qty = sets[key].qty;
                                     if ($(parentBox).attr('data-list') == 1 && qty == 0) {
-                                        $(parentBox).find('div.main-cart__cart-content__product__count').addClass('hidden');
+                                        $(parentBox).find('div.main-cart__cart-content__product__counter').addClass('hidden');
                                         $(parentBox).find('span.put-set-to-cart').removeClass('hidden');
                                         qty = 1;
                                     }
@@ -115,12 +119,12 @@
                             }
                         }
 
-                        if (helpSets !== undefined) {
+                        if (helpSets !== undefined && isHelp) {
                             for (key in helpSets) {
                                 if (key == product) {
                                     qty = helpSets[key].qty;
                                     if (qty == 0) {
-                                        $(parentBox).find('div.main-cart__cart-content__product__count').addClass('hidden');
+                                        $(parentBox).find('div.main-cart__cart-content__product__counter').addClass('hidden');
                                         $(parentBox).find('span.put-help-set-to-cart').removeClass('hidden');
                                         qty = 1;
                                     }
@@ -150,7 +154,7 @@
         $('body')
             .on('click', '.put-to-cart', function () {
                 var that = this;
-                var productBox = $(this).parents('.single-product-box');
+                var productBox = $(this).parents('.product-box');
                 var product = $(productBox).attr('data-product');
                 $.ajax({
                     url: '/cart/add',
@@ -165,7 +169,7 @@
                             var cartTotal = dataResponse.data.total;
                             changeCartData(cartTotal);
                             $(that).addClass('hidden');
-                            $(productBox).find('div.main-cart__cart-content__product__count').removeClass('hidden');
+                            $(productBox).find('div.main-cart__cart-content__product__counter').removeClass('hidden');
                         }
                     },
                     error: function (xhr, error, status) {
@@ -175,7 +179,7 @@
             })
             .on('click', '.put-set-to-cart', function () {
                 var that = this;
-                var setBox = $(this).parents('.main-content__sets-box');
+                var setBox = $(this).parents('.product-box');
                 var set = $(this).attr('data-set');
                 $.ajax({
                     url: '/cart/add',
@@ -190,7 +194,7 @@
                             var cartTotal = response.data.total;
                             changeCartData(cartTotal);
                             $(that).addClass('hidden');
-                            $(setBox).find('div.main-cart__cart-content__product__count').removeClass('hidden');
+                            $(setBox).find('div.main-cart__cart-content__product__counter').removeClass('hidden');
                         }
                     },
                     error: function (xhr) {
@@ -241,6 +245,38 @@
                     }
                 });
             })
+            .on('click', '.help-donate', function () {
+                var helpId = $(this).parents('.families-section__block').data('help');
+                var amount = $(this).parents('.families-section__block').find('.help-amount').val();
+                if (amount > 0) {
+                    $.ajax({
+                        url: 'cart/add',
+                        data: {
+                            action: 'helpDonate',
+                            help: helpId,
+                            amount: amount
+                        },
+                        type: 'POST',
+                        dataType: 'json',
+                        success: function (response) {
+                            if (response.error == 0) {
+                                console.log(response);
+                            }
+                        },
+                        error: function (xhr) {
+                            console.log(xhr.responseText);
+                        }
+                    });
+                }
+            })
+            .on('click', 'input.set-week-set', function () {
+                if ($(this).prop('checked')) {
+                    var weekAmount = $(this).data('help-week');
+                    if (weekAmount) {
+                        $(this).parents('.families-section__block').find('input.help-amount').val(weekAmount);
+                    }
+                }
+            })
             .on('click', '.reply-order-again', function () {
                 var order = $(this).attr('data-order');
                 var popupBox = $('.main-my-orders__reply-order-popup');
@@ -288,7 +324,7 @@
                 else if ($(this).hasClass('it-help-set'))
                     $(this).parents('.single-help-set').remove();
                 else
-                    $(this).parents('.single-product').remove();
+                    $(this).parents('.product-box').remove();
             })
             .on('click', '.main-profile__profile-content__box__info__choose', function () {
                 $('#user-sex').val($(this).attr('data-sex'));
@@ -534,12 +570,12 @@
                 })
             })
             .on('click', '.pre-save', function () {
-                var len = $('.single-product-table').length;
+                var len = $('.product-box-table').length;
                 if (len) {
                     var productItem = '';
                     var e;
                     for (var i = 0; i < len; i++) {
-                        e = $('.single-product-table')[i];
+                        e = $('.product-box-table')[i];
                         productItem += '{"product":"' + $(e).find('#item-product-name').val() + '","value":"' + $(e).find('#item-product-value').val() + '","measure":"' + $(e).find('#item-product-measure').val() + '"},';
                     }
                     $('#reports-tablereport').val('['+productItem.substring(0, productItem.length - 1)+']');
@@ -583,5 +619,18 @@
             });
         }
 
-    })
+    });
+
+    $(".header__actions__btn-mobile-menu").click(function () {
+        $(".mobile-menu__wrap").fadeIn(100);
+        $("body").css({"overflow": "hidden"});
+        $(".mobile-menu").addClass("mobile-menu_opened");
+    });
+
+    $(".mobile-menu__btn-close").click(function () {
+        $(".mobile-menu__wrap").fadeOut(100);
+        $("body").css({"overflow": "auto"});
+        $(".mobile-menu").removeClass("mobile-menu_opened");
+    });
+
 })(jQuery);

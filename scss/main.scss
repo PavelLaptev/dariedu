@@ -62,7 +62,7 @@ h4 {
 h5 {
 	font-family: 'Roboto Slab',serif;
 	font-size: 22px;
-	font-weight: 700;
+	font-weight: 700;	
 	@media screen and (max-width: 600px) {
 		font-size: 18px;
 	}
@@ -76,6 +76,16 @@ p{
 a {
 	text-decoration: none;
 	transition: all 0.2s;
+}
+
+ul{
+	font-size: 18px;
+	margin: 40px 0 30px;
+}
+
+li{
+	font-size: 18px;
+	margin-bottom: 10px;
 }
 
 .wrapper {

@@ -27,7 +27,6 @@
 }
 
 .families-section{
-	min-height: 500px;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: flex-start;
@@ -35,6 +34,8 @@
 		display: flex;
 		flex: 0 1 calc(100%/3 - 16px);
 		flex-direction: column;
+		max-height: 800px;
+		justify-content: justify-content;
 		border-radius: $block-radius;
 		border: 2px solid #eee;
 		padding: 18px;
@@ -62,6 +63,23 @@
 			&:nth-child(2n+2){
 				margin-right: auto;
 			}
+		}
+
+		&_top{
+			display: flex;
+			flex-direction: column;
+			flex: 1 0 auto;
+		}
+		&_middle{
+			overflow: hidden;
+			text-overflow: ellipsis;
+			position: relative;
+		}
+		&_bottom{
+			// margin-bottom: auto;
+			display: flex;
+			flex-direction: column;
+			flex: 1 0 auto;
 		}
 
 		&__sum{
@@ -111,7 +129,7 @@
 
 		&__aim{
 			margin-bottom: 8px;
-			margin-top: 8px;
+			margin-top: 20px;
 			&__title{
 				font-size: 16px;
 				font-weight: 600;
@@ -155,12 +173,11 @@
 
 		&__description{
 			font-size: 15px;
-			height: 110px;
+			height: 10%;
 			line-height: 1.5;
-			overflow: hidden;
-			text-overflow: ellipsis;
 			position: relative;
 			&__show-more{
+				z-index: 9999;
 				position: absolute;
 				bottom: 0;
 				right: 0;
@@ -173,6 +190,7 @@
 
 		&__picture{
 			width: 100%;
+			min-height: 200px;
 			height: 200px;
 			margin-bottom: 10px;
 			border-radius: 4px;

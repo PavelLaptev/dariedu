@@ -339,48 +339,19 @@
 /* columns */
 @mixin double-columns {
 	overflow: hidden;
-	flex-grow: 1;
-	flex-shrink: 0;
-	flex-basis: calc(50% - 18px);
-	max-width: calc(50% - 18px);
 	display: flex;
-	justify-content: flex-start;
-	transition: .3s all;
+	flex: 0 1 calc(50% - 20px);
+	transition: .2s all;
 	position: relative;
+	margin-right: 40px;
 
 	&:nth-child(even) {
-		margin-left: 18px;
-	}
-	&:nth-child(odd) {
-		margin-right: 18px;
-		&:last-child {
-			margin-right: 0;
-		}
+		margin-right: 0;
 	}
 
-	@media screen and (max-width: $mobile-width) {
-		flex-basis: calc(50% - 9px);
-		max-width: calc(50% - 9px);
-		&:nth-child(even) {
-			margin-left: 9px;
-		}
-		&:nth-child(odd) {
-			margin-right: 9px;
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-	}
-
-	@media screen and (max-width: 650px) {
-		flex-basis: 100%;
-		max-width: 100%;
-		&:nth-child(even) {
-			margin-left: 0;
-		}
-		&:nth-child(odd) {
-			margin-right: 0;
-		}
+	@media screen and (max-width: 620px) {
+		flex: 0 1 100%;
+		margin-right: 0;
 	}
 }
 
