@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta name="robots" content="none"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="Gizzn-AQ22-1CF9uDDy4nop1WVratu4gxui1pWbAZLktQIP7gX_iGv15CVxEfujOvVgWbpHVn0f2sIPwAPgpjw==">
+    <title>Такой старницы не существует</title>
+    <link href="/assets/b6c3724f/css/bootstrap.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto+Slab:100,300,400,700|Roboto:100,300,400,500,700" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/fontawesome-all.min.css" rel="stylesheet">    <link href="/css/bundle.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+</head>
+<body data-gr-c-s-loaded="true">
+
+<input type="hidden" class="social-meta url" value="https://dariedu.ru/site/error" />
+<input type="hidden" class="social-meta title" value="Такой старницы не существует" />
+<input type="hidden" class="social-meta image" value="" />
+<input type="hidden" class="social-meta description" value="" />
+
+<div class="wrapper with-background">
+            <span class="header__background-wrapper"></span>
+    
+    <div class="mobile-menu__wrap">
+        <div class="mobile-menu">
+            <div class="mobile-menu__top">
+                <button class="mobile-menu__btn-close"></button>
+                <img class="mobile-menu__logo-short" src="/img/logo-small.svg" alt="Дари еду!">
+            </div>
+            <div class="mobile-menu__middle">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__list__item"><a href="/about">О нас</a></li>
+                                        <li class="mobile-menu__list__item"><a href="https://donation.dariedu.ru/help">Кому мы помогаем</a></li>
+                                        <li class="mobile-menu__list__item"><a href="/your-help">Помочь проекту</a></li>
+                    <li class="mobile-menu__list__item"><a href="/reports">Отчёты</a></li>
+                    <li class="mobile-menu__list__item"><a href="/partnership">Сотрудничество</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu__actions">
+                <a href="/cart" class="mobile-menu__actions__btn-cart">
+                    <img class="mobile-menu__actions__btn-cart__icon" src="/img/buttons/basket.svg">
+                    <span class="mobile-menu__actions__btn-cart__badge cart-badge">3</span>
+                </a>
+
+                                    <a class="mobile-menu__actions__btn-login" data-toggle="modal" data-target="#loginModal" role="button">
+                                        <img class="mobile-menu__actions__btn-login__icon" src="/img/buttons/profile-icon-hover.svg">
+                        <span class="mobile-menu__actions__btn-login__badge">Войти</span>
+                    </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="header without-background">
+
+                    <span class="header__background-wrapper"></span>
+        
+        <div class="header__content view-port">
+            <div class="header__top">
+                <a class="header__logo" href="/">
+                    <img class="header__logo__full" src="/img/logo.svg" alt="Дари еду!">
+                    <img class="header__logo__short" src="/img/logo-small.svg" alt="Дари еду!">
+                </a>
+                <div class="header__actions">
+
+                                            <a class="header__actions__btn-login" data-toggle="modal" data-target="#loginModal" role="button">
+                                                <img class="header__actions__btn-login__icon" src="/img/buttons/profile-icon-hover.svg">
+                            <span class="header__actions__btn-login__badge">Войти</span>
+                        </a>
+
+                    <a href="/cart" class="header__actions__btn-cart">
+                        <img class="header__actions__btn-cart__icon" src="/img/buttons/basket.svg">
+                        <span class="header__actions__btn-cart__badge cart-badge">3</span>
+                    </a>
+                    <button class="header__actions__btn-mobile-menu"></button>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <ul class="header__menu">
+                    <li class="header__menu__item"><a href="/about">О нас</a></li>
+                                        <li class="header__menu__item"><a href="https://donation.dariedu.ru/help">Кому мы помогаем</a></li>
+                                        <li class="header__menu__item"><a href="/your-help">Помочь проекту</a></li>
+                    <li class="header__menu__item"><a href="/reports">Отчёты</a></li>
+                    <li class="header__menu__item"><a href="/partnership">Сотрудничество</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content-section without-background">
+
+        <div class="site-error main-site-error slim-view-port">
+
+    <img class="main-site-error__cover" src="/img/404.svg" />
+
+    <p class="main-site-error__hint">Ой... Похоже такой<br>страницы не существует</p>
+
+    <a href="/" class="main-site-error__link">Вернуться на главную</a>
+
+</div>
+
+    </div>
+
+
+    <div class="footer without-background">
+
+                    <span class="footer__background-wrapper"></span>
+        
+        <div class=" view-port footer__content">
+            <div class="footer__copyright">
+                <a class="footer__copyright__logo" href="/"><img src="/img/logo-small.svg"></a>
+                <span class="footer__copyright">Благотворительный фонд <span style="white-space: nowrap;">«Дари еду»</span> © 2018                    <br>ОГРН 1167700076169
+                    <br>ИНН 7713426066
+                    <br>КПП 771301001
+                </span>
+            </div>
+            <div class="footer__menu">
+                <ul class="footer__menu__block">
+                    <li class="footer__menu__link"><a href="/products">Перечень продуктов</a></li>
+                    <li class="footer__menu__link"><a href="/map">Карта ящиков</a></li>
+                    <li class="footer__menu__link"><a href="/contacts">Контакты</a></li>
+                </ul>
+                <ul class="footer__menu__block">
+                    <li class="footer__menu__link"><a href="/partners">Партнеры</a></li>
+                    <li class="footer__menu__link"><a href="/for-media">Для СМИ</a></li>
+                    <li class="footer__menu__link"><a href="/faq">Вопросы и ответы</a></li>
+                </ul>
+            </div>
+            <ul class="footer__social-links">
+                <li class="footer__menu__link">
+                    <i class="fab fa-facebook-square" style="color:#4167af;"></i>
+                    <a href="https://www.facebook.com/dariedu.ru/" target="_blank">Facebook</a>
+                </li>
+                <li class="footer__menu__link">
+                    <i class="fab fa-instagram" style="color:#ff0350;"></i>
+                    <a href="https://www.instagram.com/dariedu/" target="_blank">Instagram</a>
+                </li>
+                <li class="footer__menu__link">
+                    <i class="fab fa-vk" style="color: #4b8fc4;"></i>
+                    <a href="https://vk.com/dariedu" target="_blank">Vkontakte</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal__content">
+                <div class="modal-header modal__header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="modal__close" aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal__title">Войти в личный кабинет</h4>
+                </div>
+
+                <form action="/login" method="post">
+                    <div class="modal-body">
+                        <input type="hidden" name="_csrf" value="Gizzn-AQ22-1CF9uDDy4nop1WVratu4gxui1pWbAZLktQIP7gX_iGv15CVxEfujOvVgWbpHVn0f2sIPwAPgpjw==" />
+
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <label class="modal__label-input" for="email-login">E-mail</label>
+                                <input type="email" id="email-login" class="modal__login-input" name="email" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row top12">
+                            <div class="col-md-12">
+                                <label class="modal__label-input" for="password-login">Пароль</label>
+                                <input type="password" id="password-login" class="modal__login-input" name="password" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-12" style="margin: 12px 0">
+                                <input type="checkbox" id="modal-accept_remember-me" class="main-registration__accepts__checkbox set-accept-my-data" name="rememberMe" checked="checked">
+                                <label for="modal-accept_remember-me" class="main-registration__accepts__label remember-me-label">Запомить пароль</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group modal__buttons">
+                            <div class="enter">
+                                <button type="submit" class="modal__login-button">Войти</button>
+                            </div>
+
+                            <div class="modal__register text-right">
+                                <a href="/registration" class="modal__registration-button" role="button">Зарегистрироваться</a>
+                                <a href="/recovery-password" class="modal__recovery-button" role="button">Забыли пароль?</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="modal-footer modal__footer">
+                    <div class="modal__socials">Войти через</div>
+                    <div class="modal__social-login">
+                        <a href="/login?service=facebook" data-eauth-service="facebook" class="modal__social-login__button">
+                            <img class="modal__social-login__button__original" src="/img/socials/fb_login.png" />
+                            <img class="modal__social-login__button__hover" src="/img/socials/fb_login-hover.png" />
+                        </a>
+                        <a href="/login?service=vkontakte" data-eauth-service="vkontakte" class="modal__social-login__button">
+                            <img class="modal__social-login__button__original" src="/img/socials/vk_login.png" />
+                            <img class="modal__social-login__button__hover" src="/img/socials/vk_login-hover.png" />
+                        </a>
+                        <a href="/login?service=odnoklassniki" data-eauth-service="odnoklassniki" class="modal__social-login__button">
+                            <img class="modal__social-login__button__original" src="/img/socials/ok_login.png" />
+                            <img class="modal__social-login__button__hover" src="/img/socials/ok_login-hover.png" />
+                        </a>
+                    </div>
+                    <p class="modal__social-hint">Мы не будем размещать какую-либо информацию на вашей странице</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script src="/assets/c835ba77/jquery.js"></script>
+<script src="/assets/e5b9ac1e/yii.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/actions.js"></script></body>
+</html>

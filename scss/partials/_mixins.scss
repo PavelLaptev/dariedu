@@ -112,8 +112,10 @@
 
 @mixin input-label {
 	color: $label-color;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 @mixin for-sticky-cart {
@@ -175,6 +177,7 @@
 
 @mixin social-hint-text {
 	font-size: 14px;
+	line-height: 1.4;
 	text-decoration: none;
 	color: #9da2a8;
 }
@@ -295,9 +298,9 @@
 		& + label {
 			display: block;
 			position: relative;
-			padding-left: 35px;
+			padding-left: 32px;
 			margin-bottom: 20px;
-			font-size: 13px;
+			font-size: 14spx;
 			font-weight: 400;
 			color: #333333;
 			cursor: pointer;

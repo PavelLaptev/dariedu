@@ -3,10 +3,6 @@
 
 .main-payment {
 
-  &__title {
-    @include h1style;
-  }
-
   &__variables {
     display: flex;
     margin-bottom: 24px;
