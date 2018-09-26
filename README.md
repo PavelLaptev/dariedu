@@ -1,1 +1,1 @@
-# dariedu
+# dariedu.ru
